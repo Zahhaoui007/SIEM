@@ -45,7 +45,7 @@ Le laboratoire repose sur deux machines virtuelles :
 
 ## Capture d’écran & démonstrations
 
-*(À insérer : captures d’écran de Kibana, alertes générées, logs Wazuh)*
+
 
 ## Auteur
 
