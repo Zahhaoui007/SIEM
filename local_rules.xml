@@ -1,0 +1,36 @@
+<group name="local,syslog,sshd,">
+
+    <!--
+    Dec 10 01:02:02 host sshd[1234]: Failed none for root from 1.1.1.1 port 1066 ssh2
+    -->
+    <rule id="100001" level="5">
+      <if_sid>5716</if_sid>
+      <srcip>1.1.1.1</srcip>
+      <description>sshd: authentication failed from IP 1.1.1.1.</description>
+      <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,</group>
+    </rule>
+      <!-- sudo -->
+    <rule id="100100" level="5">
+        <program_name>sudo</program_name>
+        <description>Utilisation de la commande sudo</description>
+        <group>command</group>
+      </rule>
+      <!-- Nmap -->
+      <rule id="100101" level="10">
+        <match>nmap</match>
+        <description>Scan réseau détecté avec Nmap</description>
+        <group>attack,scan</group>
+      </rule>
+      <!-- mot-clé personnalisé -->
+      <rule id="100102" level="8">
+        <match>ALERT_MALICIOUS_BEHAVIOR</match>
+        <description>Comportement malicieux détecté</description>
+        <group>custom,alert</group>
+      </rule>
+      
+          
+      
+  
+  </group>
+  
+  

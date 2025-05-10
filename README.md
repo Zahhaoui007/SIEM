@@ -33,6 +33,7 @@ Le laboratoire repose sur deux machines virtuelles :
    - Connexions SSH anormales.
    - Création de fichiers sensibles.
    - Attaques réseau simulées (scan, brute force…).
+   - Règles personnalisées utiles 
 
 ## Outils utilisés
 
